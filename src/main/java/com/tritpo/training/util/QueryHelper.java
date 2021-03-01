@@ -1,0 +1,41 @@
+package com.tritpo.training.util;
+
+
+import com.tritpo.training.dao.reader.AbstractResultSetReader;
+import com.tritpo.training.domain.BaseEntity;
+import com.tritpo.training.specification.SqlSpecification;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Optional;
+
+
+public class QueryHelper {
+
+    public static Optional<? extends BaseEntity> query(Connection connection, SqlSpecification specification,
+                                                       String sqlQuery,
+                                                       AbstractResultSetReader<? extends BaseEntity> reader) throws SQLException {
+        Optional<BaseEntity> entity;
+        PreparedStatement preparedStatement = specification.toPreparedStatement(connection, sqlQuery);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        if (resultSet.next()) {
+            entity = Optional.of(reader.oneObjectRead(resultSet));
+            return entity;
+        } else {
+            return Optional.empty();
+        }
+    }
+
+    public static List<? extends BaseEntity> queryAll(Connection connection, SqlSpecification specification,
+                                            String sqlQuery,
+                                            AbstractResultSetReader<? extends BaseEntity> reader) throws SQLException {
+        List<? extends BaseEntity> entities;
+        PreparedStatement preparedStatement = specification.toPreparedStatement(connection, sqlQuery);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        entities = reader.manyObjectsRead(resultSet);
+        return entities;
+    }
+}
