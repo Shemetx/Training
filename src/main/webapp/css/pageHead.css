@@ -1,0 +1,51 @@
+.page-header {
+    background: #222831;
+    height: 35px;
+}
+
+.adminPanel {
+    position: absolute;
+    right: 450px;
+    top: 1px;
+}
+
+.profile {
+    position: absolute;
+    right: 350px;
+    top: 1px;
+}
+
+.toHome {
+    position: absolute;
+    left: 200px;
+    top: 1px;
+}
+
+
+.log-in {
+position: absolute;
+    right: 250px;
+    top: 1px;
+}
+
+.sign-up {
+    position: absolute;
+    right: 150px;
+    top: 1px;
+}
+
+.log-out {
+    position: absolute;
+    right: 50px;
+    top: 1px;
+}
+
+.selectP {
+    height: 10px;
+}
+
+.buttonPanel {
+    margin-top: 100px;
+    width: 25%;
+    float: left;
+}
