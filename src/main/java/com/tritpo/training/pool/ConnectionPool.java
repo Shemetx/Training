@@ -1,6 +1,5 @@
 package com.tritpo.training.pool;
 
-
 import com.tritpo.training.domain.ApplicationProperties;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

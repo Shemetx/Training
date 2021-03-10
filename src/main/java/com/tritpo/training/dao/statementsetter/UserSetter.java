@@ -1,6 +1,5 @@
 package com.tritpo.training.dao.statementsetter;
 
-
 import com.tritpo.training.domain.User;
 
 import java.sql.Connection;

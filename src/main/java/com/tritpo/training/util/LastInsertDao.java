@@ -8,7 +8,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-
+/**
+ *  Util class to get last inserted entity from database
+ *
+ * @author Yurchyk Uladzislau on 2021-01-15.
+ * @version 0.0.1
+ */
 public class LastInsertDao {
     private static final Logger logger = LogManager.getLogger(LastInsertDao.class);
     public static int getLastDao(Connection connection)  {

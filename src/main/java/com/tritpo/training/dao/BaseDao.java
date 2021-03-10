@@ -21,7 +21,7 @@ public interface BaseDao<T> {
      * @param specification a {@link SqlSpecification} a object
      *                         that contains last part of sql query and parameters
      */
-    void delete(T entity, SqlSpecification specification);
+    void delete(T entity,SqlSpecification specification);
     /**
      * The method designed for the process of updating an object in database.
      *
@@ -36,7 +36,7 @@ public interface BaseDao<T> {
      *
      * @param specification a {@link SqlSpecification} a object
      *                      that contains last part of sql query and parameters
-     * @return a {@link Optional} implementation with object
+     * @return a {@link java.util.Optional} implementation with object
      */
     Optional<T> query(SqlSpecification specification);
     /**

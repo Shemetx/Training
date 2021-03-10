@@ -1,6 +1,5 @@
 package com.tritpo.training.util;
 
-
 import com.tritpo.training.dao.reader.AbstractResultSetReader;
 import com.tritpo.training.domain.BaseEntity;
 import com.tritpo.training.specification.SqlSpecification;
@@ -12,7 +11,12 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional;
 
-
+/**
+ *  Util class that helps dao layer execute queries
+ *
+ * @author Yurchyk Uladzislau on 2021-01-15.
+ * @version 0.0.1
+ */
 public class QueryHelper {
 
     public static Optional<? extends BaseEntity> query(Connection connection, SqlSpecification specification,

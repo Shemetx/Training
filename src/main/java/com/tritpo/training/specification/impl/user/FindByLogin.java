@@ -1,6 +1,5 @@
 package com.tritpo.training.specification.impl.user;
 
-
 import com.tritpo.training.specification.SqlSpecification;
 
 import java.sql.Connection;

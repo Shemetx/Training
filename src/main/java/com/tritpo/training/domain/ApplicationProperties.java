@@ -1,7 +1,7 @@
 package com.tritpo.training.domain;
 
-
 import com.tritpo.training.util.PropertyReaderUtil;
+
 
 public enum ApplicationProperties {
     INSTANCE;

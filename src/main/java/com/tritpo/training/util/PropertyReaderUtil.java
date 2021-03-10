@@ -9,7 +9,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-
+/**
+ *  Util class to read properties
+ *
+ * @author Yurchyk Uladzislau on 2021-01-15.
+ * @version 0.0.1
+ */
 public final class PropertyReaderUtil {
 
     private static final Logger logger = LogManager.getLogger(PropertyReaderUtil.class);
@@ -24,7 +29,7 @@ public final class PropertyReaderUtil {
     }
 
     public static void loadProperties() throws IOException {
-        final String propertiesFileName = "C:/epam/final-project/src/main/resources/application.properties";
+        final String propertiesFileName = "C:/pets/Training/src/main/resources/application.properties";
         try (InputStream inputStream = new FileInputStream(propertiesFileName)) {
             properties.load(inputStream);
             logger.info("App properties successfully loaded");

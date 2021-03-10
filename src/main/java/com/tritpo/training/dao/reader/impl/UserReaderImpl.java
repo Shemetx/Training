@@ -1,6 +1,5 @@
 package com.tritpo.training.dao.reader.impl;
 
-
 import com.tritpo.training.dao.reader.AbstractResultSetReader;
 import com.tritpo.training.domain.Role;
 import com.tritpo.training.domain.User;
